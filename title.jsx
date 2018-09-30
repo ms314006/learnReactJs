@@ -50,7 +50,7 @@ class InputTemperature extends React.Component{
                 <span>目前輸入溫度是：{this.props.temperature}{this.props.type}</span>
                 <input tyep="number" name={"temperature_"+this.props.type} 
                         value={this.props.temperature} 
-                        onChange={this.changeState} />
+                        onChange={this.props.changeState} />
             </div>
         )
     }
