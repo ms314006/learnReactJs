@@ -43,6 +43,7 @@ class Celsius extends React.Component {
     }
 }
 
+//輸入溫度的組件
 class InputTemperature extends React.Component{
     render(){
         return(
