@@ -9,11 +9,26 @@ class Title extends React.Component {
     }
 }
 
-class Celsius extends React.Component {
+//輸入溫度的組件
+class InputTemperature extends React.Component{
+    render(){
+        return(
+            <div>
+                <span>目前輸入溫度是：{this.props.temperature}度{this.props.type}</span><br/>
+                <input tyep="number" name={"temperature_"+this.props.type} 
+                        value={this.props.temperature} 
+                        onChange={this.props.changeState} />度{this.props.type}
+            </div>
+        )
+    }
+}
+
+
+class EasyForm extends React.Component {
     constructor(props) {
         super(props)
         //用state來記錄溫度數值
-        this.state = ({ temperature : 0 })
+        this.state = ({ temperature_C : 0 })
         //設定changeState是在此class下執行
         this.changeState = this.changeState.bind(this)
     }
@@ -30,31 +45,14 @@ class Celsius extends React.Component {
     render() {
         return(
             <div>
-                {/*用Title組件顯示目前輸入的溫度*/}
-                <Title temperature={this.state.temperature} />
-                {/*這裡顯示輸入的溫度*/}
-                <span>目前攝氏溫度是：{this.state.temperature}</span><br/>
-                {/*輸入溫度的地方*/}
-                <input type="number" name="temperature" 
-                        value={this.state.temperature} 
-                        onChange={this.changeState}/>
+                <Title temperature={this.state.temperature_C} />
+                <InputTemperature type="C" 
+                temperature={this.state.temperature_C} 
+                changeState={this.changeState} />
             </div>
         )
     }
 }
 
-//輸入溫度的組件
-class InputTemperature extends React.Component{
-    render(){
-        return(
-            <div>
-                <span>目前輸入溫度是：{this.props.temperature}{this.props.type}</span>
-                <input tyep="number" name={"temperature_"+this.props.type} 
-                        value={this.props.temperature} 
-                        onChange={this.props.changeState} />
-            </div>
-        )
-    }
-}
 
-ReactDOM.render(<Celsius  />, document.getElementById('root'))
+ReactDOM.render(<EasyForm  />, document.getElementById('root'))
