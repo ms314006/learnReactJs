@@ -15,8 +15,8 @@ class InputTemperature extends React.Component{
     所以這裡只需要render負責輸出組件內容*/
     render(){
         return(
+            /*所有的資料都從父組件傳進來，所以使用props接收資料，包括function*/
             <div>
-                {/*所有的資料都從父組件傳進來，所以使用props接收資料，包括function*/}
                 <span>目前輸入溫度是：{this.props.temperature}度{this.props.type}</span><br/>
                 <input name="temperature"
                         value={this.props.temperature} 
