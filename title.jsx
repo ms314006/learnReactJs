@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 //判斷溫度是否達沸點
 class Title extends React.Component {
     render(){
-        //單純判斷傳進來的溫度有沒有大於100
-        return <h1>{(this.props.temperature>100 ? '達到沸點!!!':'未到沸點...')}</h1>
+        //單純判斷傳進來的溫度有沒有大於等於100
+        return <h1>{(this.props.temperature>=100 ? '達到沸點!!!':'未到沸點...')}</h1>
     }
 }
 
