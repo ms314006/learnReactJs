@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 class Message extends React.Component{
     render(){
+        //這邊做一些簡單的樣式，不然留言會全部擠在一起
         let divStyle={marginBottom:20}
         let messageStyle={marginLeft:20}
         return(
@@ -17,6 +18,7 @@ class Message extends React.Component{
 class MessageBlock extends React.Component{
     render(){
         let message = this.props.messageData.map((item)=>{
+            //在這裡用if判斷留言者item.name中是否含有this.props.searchName的值，如果有就執行，沒有就不動作
             if(item.name.indexOf(this.props.searchName)!=-1)
                 return <Message name={item.name} message={item.message} />
         })
@@ -58,7 +60,9 @@ class MessageForm extends React.Component{
                 <SearchBlock searchName={this.state.name}
                                 changeState={this.changeState} />
                 <hr />
-                <MessageBlock searchName={this.state.name} />
+                {/*透過props的單向資料流，再將訊息傳入MessageBlock中處理*/}
+                <MessageBlock messageData={this.props.messageData} 
+                                searchName={this.state.name} />
             </div>
         )
     }
