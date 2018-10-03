@@ -28,7 +28,7 @@ class MessageBlock extends React.Component {
         return (
         <div style={this.state.style}>
             <Message>
-                <p onClick={this.writeMessageConsole}>組件標籤內的內容會被傳到該組件的props.children中</p>
+                <p onClick={this.writeMessageConsole}>點我看console，事件可以直接設定在props.children上面</p>
             </Message>
         </div>)
     }
