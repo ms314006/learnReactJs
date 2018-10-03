@@ -41,13 +41,6 @@ class SearchBlock extends React.Component{
     }
 }
 
-//訊息資料
-let data = [{name:'神Ｑ',message:'嗨！大家好啊！'},
-            {name:'小馬',message:'早安啊！昨天有沒有好好發文？'},
-            {name:'王子',message:'ㄛ！別說了，那真的超級累！'},
-            {name:'神Ｑ',message:'哈哈哈！加油啦！再一下就結束了！'},
-            {name:'王子',message:'結束後我一定要爆睡一頓！'},]
-
 class MessageForm extends React.Component{
     constructor(props){
         super(props)
@@ -65,10 +58,17 @@ class MessageForm extends React.Component{
                 <SearchBlock searchName={this.state.name}
                                 changeState={this.changeState} />
                 <hr />
-                <MessageBlock messageData={data} searchName={this.state.name} />
+                <MessageBlock searchName={this.state.name} />
             </div>
         )
     }
 }
 
-ReactDOM.render(<MessageForm  />, document.getElementById('root'))
+//訊息資料
+let data = [{name:'神Ｑ',message:'嗨！大家好啊！'},
+            {name:'小馬',message:'早安啊！昨天有沒有好好發文？'},
+            {name:'王子',message:'ㄛ！別說了，那真的超級累！'},
+            {name:'神Ｑ',message:'哈哈哈！加油啦！再一下就結束了！'},
+            {name:'王子',message:'結束後我一定要爆睡一頓！'},]
+
+ReactDOM.render(<MessageForm  messageData={data} />, document.getElementById('root'))
