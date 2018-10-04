@@ -15,3 +15,7 @@ ex03:https://ms314006.github.io/learnReactJs/Composition/ex03/index.html
 Message Board:
 
 https://ms314006.github.io/learnReactJs/MessageBoard/index.html
+
+Redux
+
+https://ms314006.github.io/learnReactJs/Redux/ex01/index.html
