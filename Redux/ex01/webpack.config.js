@@ -2,7 +2,7 @@ const path = require('path');
 module.exports = {
     //這個webpack打包的對象，這裡面加上剛剛建立的index.js
     entry: {
-        index: ['./title.jsx']
+        index: ['./index.js']
     },
     output: {
         //這裡是打包後的檔案名稱
