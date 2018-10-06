@@ -24,5 +24,7 @@ const rootReducer = (state = data, action) => {
 const store = createStore(rootReducer)
 
 //測試用加上去的，等等再把它拿掉：
-window.store = store;
-window.addMessage = addMessage;
+//window.store = store;
+//window.addMessage = addMessage;
+
+export default store
