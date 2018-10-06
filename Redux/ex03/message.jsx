@@ -2,10 +2,55 @@ import React from "react"
 import ReactDOM from "react-dom"
 import {Provider} from "react-redux"
 import {connect} from "react-redux"
-import store from "./index.js"
+import {store,addMessage} from "./index.js"
 
-class MessageList extends React.Component {
+class ConnectInputMessage extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = ({name:'',message:''})
+        this.clearMessage = this.clearMessage.bind(this)
+        this.changeState = this.changeState.bind(this)
+        this.submitMessage = this.submitMessage.bind(this)
+    }
+
+    changeState(event){
+        this.setState({[event.target.name]:event.target.value})
+    }
+
+    clearMessage(){
+        this.setState({name:'',message:''})
+    }
+
+    submitMessage(){
+        let messageData = {
+            name:this.state.name,
+            message:this.state.message,
+        }
+        this.props.addMessage(messageData)
+        this.clearMessage()
+    }
+
     render(){
+        return(
+            <div>
+                暱稱：<input type="text" name="name" 
+                            value={this.state.name}
+                            onChange={this.changeState} />
+                <br/>
+                留言訊息：<textarea name="message" 
+                                value={this.state.message}
+                                onChange={this.changeState}></textarea>
+                <br/>
+                <input type="button" value="送出留言"
+                        onClick={this.submitMessage} />
+            </div>
+        )
+    }
+}
+
+class ConnectMessageList extends React.Component {
+    render(){
+        console.log(this.props.data)
         let message = this.props.data.map((item)=>{
             return <li>{item.name}：{item.message}</li>
         })
@@ -21,14 +66,26 @@ const mapStateToProps = state => {
     return { data: state.message }       
 }
 
-const List = connect(mapStateToProps)(MessageList)
+const mapDispatchToProps = dispatch => {
+    return {
+        addMessage: article => dispatch(addMessage(article))
+      }    
+}
+
+const InputMessage = connect(null,mapDispatchToProps)(ConnectInputMessage)
+const MessageList = connect(mapStateToProps)(ConnectMessageList)
 
 class MessageForm extends React.Component {
     render(){
         return(
-            <Provider store={store}>
-                <List />
-            </Provider>
+            <div>
+                <Provider store={store}>
+                    <InputMessage />
+                </Provider>
+                <Provider store={store}>
+                    <MessageList />
+                </Provider>
+            </div>
         )
     }
 }

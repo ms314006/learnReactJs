@@ -14,7 +14,7 @@ const addMessage = article => ({type:'addMessage',payload:article})
 const rootReducer = (state = data, action) => {
     switch (action.type) {
         case "addMessage":
-            break;
+            return { ...state, message: [...state.message, action.payload] }
         default:
             return state
     }
@@ -24,7 +24,7 @@ const rootReducer = (state = data, action) => {
 const store = createStore(rootReducer)
 
 //測試用加上去的，等等再把它拿掉：
-//window.store = store;
+window.store = store;
 //window.addMessage = addMessage;
 
-export default store
+export {store,addMessage}
