@@ -2,6 +2,10 @@ Hello!
 
 This is my process of learn react.
 
+Basic:
+
+ex01:https://github.com/ms314006/learnReactJs/blob/master/Basic/ex01/helloWorld.html
+
 Lifting State Up:
 
 https://ms314006.github.io/learnReactJs/LiftingStateSimple/ex01/index.html
@@ -18,4 +22,6 @@ https://ms314006.github.io/learnReactJs/MessageBoard/index.html
 
 Redux
 
-https://ms314006.github.io/learnReactJs/Redux/ex01/index.html
+ex01:https://ms314006.github.io/learnReactJs/Redux/ex01/index.html
+ex02:https://ms314006.github.io/learnReactJs/Redux/ex02/index.html
+init:https://github.com/ms314006/learnReactJs/tree/master/Redux/init
