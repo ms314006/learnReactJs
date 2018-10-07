@@ -47,10 +47,9 @@ class MessageForm extends React.Component{
     constructor(props){
         super(props)
         this.state = ({name:''})
-        this.changeState = this.changeState.bind(this)
     }
 
-    changeState(event){
+    changeState = (event) => {
         this.setState({name:event.target.value})
     }
 
