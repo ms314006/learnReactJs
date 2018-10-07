@@ -7,20 +7,17 @@ class InputMessage extends React.Component {
     constructor(props){
         super(props)
         this.state = ({name:'',message:''})
-        this.clearMessage = this.clearMessage.bind(this)
-        this.changeState = this.changeState.bind(this)
-        this.submitMessage = this.submitMessage.bind(this)
     }
 
-    changeState(event){
+    changeState = (event) => {
         this.setState({[event.target.name]:event.target.value})
     }
 
-    clearMessage(){
+    clearMessage = () => {
         this.setState({name:'',message:''})
     }
 
-    submitMessage(){
+    submitMessage = () => {
         let messageData = {
             name:this.state.name,
             message:this.state.message,
