@@ -32,8 +32,6 @@ class EasyForm extends React.Component {
         super(props)
         //用state來記錄溫度數值和該數值是哪個溫度單位(攝氏或華氏)
         this.state = ({ temperature : 0,type : '' })
-        //設定changeState是在此class下執行
-        this.changeState = this.changeState.bind(this)
     }
 
     //轉換溫度單位
@@ -47,7 +45,7 @@ class EasyForm extends React.Component {
     }
 
     //傳入type代表現在是哪種溫度變化
-    changeState(type){
+    changeState = (type) => {
         //取得目前輸入的值
         let temperature = window.event.target.value
         //將目前溫度和溫度的單位寫進去state中
