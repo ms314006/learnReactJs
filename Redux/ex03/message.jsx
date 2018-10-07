@@ -75,6 +75,9 @@ class ConnectMessageForm extends React.Component {
     render(){
         return(
             <div>
+                {/*把兩個組件放進來，一個需要資料一個需要事件
+                這裡用props來傳，因為ConnectMessageForm等等會被connect
+                資料也是傳到他的props中*/}
                 <InputMessage addMessage={this.props.addMessage} />
                 <MessageList data={this.props.data} />
             </div>
