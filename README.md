@@ -4,7 +4,7 @@ This is my process of learn react.
 
 Webpack:
 
-ex01:https://ms314006.github.io/learnReactJs/Webpack/ex01/index.html
+ex01:https://ms314006.github.io/learnReactJs/webpack/ex01/index.html
 
 Basic:
 
