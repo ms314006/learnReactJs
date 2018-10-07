@@ -1,7 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import {Provider} from "react-redux"
-import {connect} from "react-redux"
+import {Provider,connect} from "react-redux"
 import {store,addMessage} from "./index.js"
 
 class InputMessage extends React.Component {
