@@ -17,10 +17,9 @@ class MessageBlock extends React.Component {
     constructor(props){
         super(props)
         this.state = ({style:{backgroundColor:'#DDDDDD',height:200,width:'100%'}})
-        this.writeMessageConsole = this.writeMessageConsole.bind(this)
     }
     //宣告事件
-    writeMessageConsole(event){
+    writeMessageConsole = (event) => {
         console.log(event.target.innerText)
     }
 
