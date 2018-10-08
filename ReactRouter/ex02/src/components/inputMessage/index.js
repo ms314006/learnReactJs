@@ -1,3 +1,1 @@
-import {InputMessage} from "./inputMessage.jsx"
-
-export default InputMessage
+export * from "./InputMessage.jsx"

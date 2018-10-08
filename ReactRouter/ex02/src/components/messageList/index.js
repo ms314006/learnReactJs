@@ -1,3 +1,1 @@
-import {MessageList} from "./messageList.jsx"
-
-export default MessageList
+export * from "./MessageList.jsx"

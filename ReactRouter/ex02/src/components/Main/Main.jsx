@@ -1,19 +1,16 @@
 import React from "react"
-import { Provider } from "react-redux"
-import { store } from "../../store/index.js"
-import InputMessage from "../inputMessage/index.js"
-import messageList from "../messageList/index.js"
+import {MessageList} from "../MessageList"
+import {InputMessage} from "../InputMessage"
 
-class Main extends React.Component {
-    render() {
+class Main extends React.Component{
+    render(){
         return (
             <div>
-                <Provider store={store}>
-                    <messageList />
-                </Provider>
+                <InputMessage />
+                <MessageList />
             </div>
         )
     }
 }
 
-export default Main
+export {Main}

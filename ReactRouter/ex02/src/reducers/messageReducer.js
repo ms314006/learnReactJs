@@ -1,13 +1,17 @@
+import {ADD_MESSAGE} from "../constants/action-types.js"
 import {data} from "../constants/models.js"
 
-//將描述各個動作對資料的行為
-const rootReducer = (state = data, action) => {
-    switch (action.type) {
-        case "ADD_MESSAGE":
+const MessageReducer = (state = data,action) =>{
+    switch(action.type){
+        case ADD_MESSAGE:{
             return { ...state, message: [...state.message, action.payload] }
-        default:
+            break
+        }
+        default:{
             return state
+            break
+        }
     }
 }
 
-export {rootReducer}
+export {MessageReducer}

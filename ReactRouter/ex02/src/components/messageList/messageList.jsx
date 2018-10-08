@@ -1,10 +1,9 @@
 import React from "react"
-import {Provider,connect} from "react-redux"
-import {store} from "../../store/index.js"
+import {connect} from "react-redux"
 
 class ConnectMessageList extends React.Component {
     render(){
-        let message = this.props.data.map((item)=>{
+        let message = this.props.message.map((item)=>{
             return <li>{item.name}：{item.message}</li>
         })
         return(
@@ -15,10 +14,11 @@ class ConnectMessageList extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return { data: state.message }       
+const mapStateToProps = state =>{
+    return {message : state.message}
 }
 
 const MessageList = connect(mapStateToProps)(ConnectMessageList)
 
 export {MessageList}
+

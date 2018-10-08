@@ -1,6 +1,6 @@
 import React from "react"
-import {Provider,connect} from "react-redux"
-import {addMessage} from "../../actions/index.js"
+import {connect} from "react-redux"
+import {addMessage} from "../../actions"
 
 class ConnectInputMessage extends React.Component {
     constructor(props){
@@ -48,11 +48,10 @@ class ConnectInputMessage extends React.Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addMessage: article => dispatch(addMessage(article))
-      }    
+        addMessage : message =>{ dispatch(addMessage(message)) } 
+    }
 }
 
 const InputMessage = connect(null,mapDispatchToProps)(ConnectInputMessage)
 
 export {InputMessage}
-
