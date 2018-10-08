@@ -1,19 +1,10 @@
 import React from "react"
-import { Provider } from "react-redux"
-import { store } from "../../store/index.js"
-import InputMessage from "../inputMessage/index.js"
-import messageList from "../messageList/index.js"
+import {Title} from "../Title"
 
-class Main extends React.Component {
-    render() {
-        return (
-            <div>
-                <Provider store={store}>
-                    <messageList />
-                </Provider>
-            </div>
-        )
+class Main extends React.Component{
+    render(){
+        return <Title title="Hello！World！" />
     }
 }
 
-export default Main
+export {Main}

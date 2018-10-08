@@ -1,3 +1,1 @@
-import Main from "./Main.jsx"
-
-export default Main
+export * from "./Main.jsx"
