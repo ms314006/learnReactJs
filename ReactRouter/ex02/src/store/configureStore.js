@@ -1,6 +1,6 @@
 import {createStore} from "redux"
-import {MessageReducer} from "../reducers"
+import {messageReducer} from "../reducers"
 
-const store = createStore(MessageReducer)
+const store = createStore(messageReducer)
 
 export {store}

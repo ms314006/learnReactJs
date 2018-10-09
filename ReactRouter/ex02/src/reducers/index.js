@@ -1,1 +1,1 @@
-export * from "./MessageReducer.js"
+export * from "./messageReducer.js"

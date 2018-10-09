@@ -1,7 +1,7 @@
 import {ADD_MESSAGE} from "../constants/action-types.js"
 import {data} from "../constants/models.js"
 
-const MessageReducer = (state = data,action) =>{
+const messageReducer = (state = data,action) =>{
     switch(action.type){
         case ADD_MESSAGE:{
             return { ...state, message: [...state.message, action.payload] }
@@ -14,4 +14,4 @@ const MessageReducer = (state = data,action) =>{
     }
 }
 
-export {MessageReducer}
+export {messageReducer}
