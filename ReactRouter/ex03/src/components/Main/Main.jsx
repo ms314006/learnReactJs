@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import { HashRouter, Route, Link } from "react-router-dom"
 import { Title } from "../Title"
 import { Home } from "../Home"
 import { About } from "../About"
@@ -7,7 +7,7 @@ import { About } from "../About"
 class Main extends React.Component {
     render() {
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div>
                     <Title title="功能選單" />
                     <ul>
@@ -18,7 +18,7 @@ class Main extends React.Component {
                     <Route exact path="/" component={Home} />
                     <Route path="/about" component={About} />
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         )
     }
 }
