@@ -6,7 +6,7 @@ class HelloTitle extends React.Component{
         console.log(`這次是${this.props.title}`)
     }
     render(){
-        //這次改成如果選擇女就輸出，選擇男則沒有動作
+        //這次改成如果選擇女就輸出，選擇男則回傳null
         if (this.props.title=="小姐"){
             return <h1>{this.props.title}！您好！</h1>
         }
