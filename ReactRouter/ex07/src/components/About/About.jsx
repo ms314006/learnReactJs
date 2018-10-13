@@ -14,9 +14,11 @@ class About extends React.Component {
                 <Switch>
                     <Route exact path={`${this.props.match.path}`} component={Introd} />
 
-                    {/*(1)*/}
                     <Route path={`${this.props.match.path}/his`} component={His} />
-                    <Redirect from={`${this.props.match.path}/story`} to={`${this.props.match.url}/his`} />
+                    <Redirect from={`${this.props.match.path}/story`} 
+                            to={{pathname:`${this.props.match.url}/his`
+                                ,search: "?hey=UCCU"
+                                ,state:{name:'Referrer'}}} />
                 </Switch>
             </div>
         )
@@ -31,6 +33,7 @@ class Introd extends React.Component {
 
 class His extends React.Component {
     render() {
+        console.log(this.props.location.state)
         return <p>這裡是歷史沿革</p>
     }
 }
