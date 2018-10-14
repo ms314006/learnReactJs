@@ -13,6 +13,10 @@ ex02:https://ms314006.github.io/learnReactJs/Basic/ex02/index.html
 ex03:https://ms314006.github.io/learnReactJs/Basic/ex03/index.html
 ex04:https://ms314006.github.io/learnReactJs/Basic/ex04/index.html
 ex05:https://ms314006.github.io/learnReactJs/Basic/ex05/index.html
+ex06:https://ms314006.github.io/learnReactJs/Basic/ex06/index.html
+ex07:https://ms314006.github.io/learnReactJs/Basic/ex07/index.html
+ex08:https://ms314006.github.io/learnReactJs/Basic/ex08/index.html
+ex09:https://ms314006.github.io/learnReactJs/Basic/ex09/index.html
 
 Lifecycle:
 
