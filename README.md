@@ -11,6 +11,8 @@ Basic:
 ex01:https://ms314006.github.io/learnReactJs/Basic/ex01/helloWorld.html
 ex02:https://ms314006.github.io/learnReactJs/Basic/ex02/index.html
 ex03:https://ms314006.github.io/learnReactJs/Basic/ex03/index.html
+ex04:https://ms314006.github.io/learnReactJs/Basic/ex04/index.html
+ex05:https://ms314006.github.io/learnReactJs/Basic/ex05/index.html
 
 Lifecycle:
 
@@ -50,3 +52,9 @@ Router
 
 ex01:https://ms314006.github.io/learnReactJs/ReactRouter/ex01/src/index.html
 ex02:https://ms314006.github.io/learnReactJs/ReactRouter/ex02/src/index.html
+ex03:https://ms314006.github.io/learnReactJs/ReactRouter/ex03/src/index.html
+ex04:https://ms314006.github.io/learnReactJs/ReactRouter/ex04/src/index.html
+ex05:https://ms314006.github.io/learnReactJs/ReactRouter/ex05/src/index.html
+ex06:https://ms314006.github.io/learnReactJs/ReactRouter/ex06/src/index.html
+ex07:https://ms314006.github.io/learnReactJs/ReactRouter/ex07/src/index.html
+ex08:https://ms314006.github.io/learnReactJs/ReactRouter/ex08/src/index.html
