@@ -45,7 +45,7 @@ class EasyForm extends React.Component {
     }
 
     //傳入type代表現在是哪種溫度變化
-    changeState = (type) => {
+    changeState(type) {
         //取得目前輸入的值
         let temperature = window.event.target.value
         //將目前溫度和溫度的單位寫進去state中
