@@ -20,7 +20,7 @@ class MessageBlock extends React.Component{
         let message = this.props.messageData.map((item)=>{
             //在這裡用if判斷留言者item.name中是否含有this.props.searchName的值，如果有就執行，沒有就不動作
             if(item.name.indexOf(this.props.searchName)!=-1)
-                return <Message name={item.name} message={item.message} />
+                return <Message key={item.id} name={item.name} message={item.message} />
         })
         return (
             <div>
@@ -47,9 +47,10 @@ class MessageForm extends React.Component{
     constructor(props){
         super(props)
         this.state = ({name:''})
+        this.changeState = this.changeState.bind(this)
     }
 
-    changeState = (event) => {
+    changeState(event) {
         this.setState({name:event.target.value})
     }
 
@@ -68,10 +69,10 @@ class MessageForm extends React.Component{
 }
 
 //訊息資料
-let data = [{name:'神Q',message:'嗨！大家好啊！'},
-            {name:'小馬',message:'早安啊！昨天有沒有好好發文？'},
-            {name:'王子',message:'ㄛ！別說了，那真的超級累！'},
-            {name:'神Q',message:'哈哈哈！加油啦！再一下就結束了！'},
-            {name:'王子',message:'結束後我一定要爆睡一頓！'},]
+let data = [{id:'1',name:'神Q',message:'嗨！大家好啊！'},
+            {id:'2',name:'小馬',message:'早安啊！昨天有沒有好好發文？'},
+            {id:'3',name:'王子',message:'ㄛ！別說了，那真的超級累！'},
+            {id:'4',name:'神Q',message:'哈哈哈！加油啦！再一下就結束了！'},
+            {id:'5',name:'王子',message:'結束後我一定要爆睡一頓！'},]
 
 ReactDOM.render(<MessageForm  messageData={data} />, document.getElementById('root'))
