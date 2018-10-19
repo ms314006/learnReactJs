@@ -7,7 +7,7 @@ import store from "./index.js"
 class MessageList extends React.Component {
     render(){
         let message = this.props.data.map((item)=>{
-            return <li>{item.name}：{item.message}</li>
+            return <li key={item.key}>{item.name}：{item.message}</li>
         })
         return(
             <ul>
