@@ -21,6 +21,7 @@ class ConnectInputMessage extends React.Component {
 
     submitMessage(){
         let messageData = {
+            id:'',
             name:this.state.name,
             message:this.state.message,
         }

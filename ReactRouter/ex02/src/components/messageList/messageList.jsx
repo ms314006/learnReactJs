@@ -4,7 +4,7 @@ import {connect} from "react-redux"
 class ConnectMessageList extends React.Component {
     render(){
         let message = this.props.message.map((item)=>{
-            return <li>{item.name}：{item.message}</li>
+            return <li key={item.id}>{item.name}：{item.message}</li>
         })
         return(
             <ul>
