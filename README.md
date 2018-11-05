@@ -1,6 +1,6 @@
 Hello!
 
-This is my process of learn react.
+This is my process of learn react. 
 
 Webpack:
 
